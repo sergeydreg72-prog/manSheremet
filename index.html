@@ -1,0 +1,24 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1d12">
+<title>Евакуація</title>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#0b1d12;color:#fff}
+#top{padding:10px;text-align:center}
+#arrowWrap{display:flex;justify-content:center}
+#arrow{width:140px;height:140px;transition:transform .15s}
+#info{font-size:1.3rem;font-weight:700;text-align:center;min-height:2.6em}
+.row{display:flex;gap:8px;padding:8px;flex-wrap:wrap}
+button,select{flex:1;font-size:1.1rem;padding:14px;border-radius:10px;border:0}
+button{background:#1db954;color:#000;font-weight:700}#sos{background:#e53935;color:#fff}
+#map{width:100%;max-height:55vh;background:#fff}
+</style></head><body>
+<div id="top"><div id="arrowWrap"><svg id="arrow" viewBox="0 0 100 100"><path d="M50 8 82 62H58v30H42V62H18z" fill="#1db954"/></svg></div>
+<div id="info">Оберіть, де ви</div></div>
+<div class="row"><select id="start"></select></div>
+<div class="row"><button id="sos">ЕВАКУАЦІЯ</button><button id="next">Я дійшов до точки</button></div>
+<svg id="map" viewBox="0 0 908 1280"><image href="plan.png" width="908" height="1280"/><g id="ov"></g></svg>
+<p style="font-size:.8rem;padding:8px;opacity:.7">Допоміжний прототип. Офіційний затверджений план евакуації має пріоритет.</p>
+<script src="app.js"></script>
+<script>if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js')</script>
+</body></html>
